@@ -3,12 +3,9 @@ import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import {Toaster} from "react-hot-toast";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ReactQueryProvider from "@/providers/ReactQueryProvider";
 
 const quickSande = Quicksand({subsets: ['latin']});
-
-const queryClient = new QueryClient();
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +23,6 @@ export default function RootLayout({
         <ReactQueryProvider>
          <GoogleOAuthProvider clientId="709883582241-iacq0m63kn2nq76c86or2ouha6f0mmrh.apps.googleusercontent.com">
            <Toaster />
-           {/* <ReactQueryDevtools /> */}
            {children}
           </GoogleOAuthProvider>
          </ReactQueryProvider>
