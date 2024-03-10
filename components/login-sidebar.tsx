@@ -34,7 +34,7 @@ export const LoginSidebar = () => {
     return(
         <div className="col-span-3 p-5">
           {!user ? (
-            <div className="p-5 bg-slate-700 rounded-lg w-fit">
+            <div className="p-5 bg-[#16181C] rounded-lg w-fit">
               <h1 className="my-2 text-xl">New to X?</h1>
               <GoogleLogin
                 onSuccess={handleLoginWithGoogle}
