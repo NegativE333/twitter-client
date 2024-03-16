@@ -5,7 +5,6 @@ import { verifyUserGoogleTokenQuery } from "@/graphql/query/user";
 import { useCurrentUser } from "@/hooks/user";
 import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
 import { useQueryClient } from "@tanstack/react-query";
-import Image from "next/image";
 import { useCallback } from "react";
 import toast from "react-hot-toast";
 import { UserCard } from "./user-card";
@@ -15,6 +14,7 @@ export const LoginSidebar = () => {
   const { user } = useCurrentUser();
 
   const queryClient = useQueryClient();
+  
 
   const handleLoginWithGoogle = useCallback(async (cred: CredentialResponse) => {
 
